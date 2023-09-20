@@ -1,1 +1,1 @@
-#E-Waste Hub by ByteByByte
+E-Waste Hub by ByteByByte
