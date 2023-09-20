@@ -21,7 +21,7 @@ router.post("/register", async (req, res) => {
         await newUser.save();
 
         req.flash("success", "You are registed successfully!");
-        res.redirect("/home");
+        res.redirect("/login");
     } catch (error) {
         req.flash("error","Registration Failed. Please Try again");
         res.redirect("/register");
