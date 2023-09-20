@@ -95,6 +95,10 @@ app.use(authRoutes);
 const mapRoutes = require("./routes/maproutes");
 app.use(mapRoutes);
 
+app.get('/',(req,res)=>{
+  res.render('login');
+})
+
 app.listen(port, () => {
   console.log("The Server is up at the ", port);
 });
