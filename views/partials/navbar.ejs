@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/navbar.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-logo border">
+        <div class="logo">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player
+            src="https://lottie.host/08548764-1851-4501-9d71-fffe651693d8/cIzt96OW0b.json"
+            background="transparent"
+            speed="1"
+            style="width: 84px; height: 74px"
+            loop
+            autoplay
+          ></lottie-player>
+          <h2>E-Waste Hub</h2>
+        </div>
+      </div>
+      
+      <div class="nav-search" style="margin-left: 10px;">
+        <input
+          placeholder="Search"
+          class="search-input"
+          onkeyup="search_category()"
+          style="padding-left: 10px"
+        />
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="nav-signin border">
+        <a href="/home" style="text-decoration: none; color: white;"> 
+          <p><span>About</span></p>
+          <p class="nav-second">E-waste Hub</p>
+        </a>
+      </div>
+
+      <div class="nav-return border">
+        <a  href="/maps" style="text-decoration: none; color: white;">
+          <p><span>Locate</span></p>
+          <p class="nav-second">Us</p>
+        </a>
+      </div>
+      
+      <% if (currentUser) { %>
+        <div class="nav-cart border">
+          
+          Welcome, <%= currentUser.username %>
+        </div>
+      <% } %>
+    </div>
+
+    <script src="/js/home.js"></script>
+    <script src="/js/findnearby.js"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Waste Hub - SignIn/SignUp</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/712/712747.png">
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="logo">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://lottie.host/08548764-1851-4501-9d71-fffe651693d8/cIzt96OW0b.json"
+        background="transparent"
+        speed="1"
+        style="width: 84px; height: 74px"
+        loop
+        autoplay
+      ></lottie-player>
+      <h2>E-Waste Hub</h2>
+    </div>
+    <div class="helper">
+      <video autoplay loop muted plays-inline class="bg">
+        <source src="/images/bg.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <form action="/login" method="post" class="sign-in-form">
+            <h2 class="title">Sign In</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input name="username" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input name="password" type="password" placeholder="Password"/>
+            </div>
+
+            <input type="submit" value="Sign In" class="btn solid" id="signin" />
+          </form>
+
+          <form action="/register" method="post" class="sign-up-form">
+            <h2 class="title">Sign Up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input name="username" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input name="email" type="email" placeholder="Email" id="semail" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input name="password" type="password" placeholder="Password" id="spassword" />
+            </div>
+            <input type="submit" value="Sign Up" class="btn solid" id="signup" />
+          </form>
+        </div>
+      </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h1>New here?</h1>
+            <p>
+              Heyy.. Join our communtity and lets make the globe more safe to
+              live
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+            <lottie-player
+              src="https://lottie.host/e4211ee2-c0b7-4303-b763-0df55267da7e/eupnVHhTnk.json"
+              background="transparent"
+              speed="1"
+              style="width: 679px"
+              loop
+              autoplay
+              class="image ice"
+            ></lottie-player>
+          </div>
+        </div>
+
+        <div class="panel right-panel">
+          <div class="content">
+            <h1>One of us?</h1>
+            <p>Welcome back ... lets make the globe more safe to live</p>
+            <button class="btn transparent" id="sign-in-btn">Sign In</button>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+            <lottie-player
+              src="https://lottie.host/9009ffc6-ecd4-41cd-9a09-e6c3fda69a40/cDHgSThgGA.json"
+              background="transparent"
+              speed="1"
+              style="width: 500px; position: absolute; right: 40%"
+              loop
+              autoplay
+              class="image"
+            ></lottie-player>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
+    <!-- <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signInWithPopup,
+        GoogleAuthProvider,
+      } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyCqgC_WY8c7V-MjYV7YsVAtLx8ZTL9SiWo",
+        authDomain: "sih2023-174c7.firebaseapp.com",
+        projectId: "sih2023-174c7",
+        storageBucket: "sih2023-174c7.appspot.com",
+        messagingSenderId: "1088009178030",
+        appId: "1:1088009178030:web:32b2b75a29f542251a963f",
+        measurementId: "G-0MTDJKQ2T8",
+      };
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      document.getElementById("gs").addEventListener("click", function (e) {
+        const provider = new GoogleAuthProvider();
+        e.preventDefault();
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            window.location = "http://localhost:8000/home";
+            // ...
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+      });
+      document.getElementById("signin").addEventListener("click", function (e) {
+        e.preventDefault();
+        const loginemail = document.getElementById("email").value;
+        const loginpass = document.getElementById("password").value;
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            window.location = "http://localhost:8000/home";
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+      });
+      document.getElementById("signup").addEventListener("click", function (e) {
+        e.preventDefault();
+        const loginemail = document.getElementById("semail").value;
+        const loginpass = document.getElementById("spassword").value;
+        createUserWithEmailAndPassword(auth, loginemail, loginpass)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            window.location = "http://localhost:8000/home";
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+      });
+    </script> -->
+  </body>
+</html>

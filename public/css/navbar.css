@@ -1,0 +1,145 @@
+* {
+    font-family: arial;
+    margin: 0;
+    border: border-box;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #090e12;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+/* Add some padding to the body to push the content below the fixed navbar */
+body {
+    padding-top: 100px;
+}
+
+.logo{
+  position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0.89%;
+    left: 0.5%;
+}
+.nav-logo {
+    height:75px;
+    width: 120px;
+}
+
+
+
+.border {
+    border: 2px solid transparent;
+}
+
+
+
+.add-first {
+    margin-left:15px;
+    color:#cccccc;
+    font: size 1rem;
+}
+
+.add-sec {
+    margin-left:3px;
+    font-size: 1rem;
+}
+
+.add-icon {
+    display: flex;
+}
+
+.nav-search {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: pink;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width:90px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border:none;
+}
+
+.search-icon {
+    width:45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #3BA3B7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color:#0f1111
+}
+
+.nav-search:hover {
+    border: 2px solid orange;
+}
+
+span {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-second {
+    font-size:0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i{          /*thiz is for icons in nav-cart*/
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.panel {
+    height: 42px;
+    color:white;
+    background-color: #2F808F;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+}
+
+.panel-ops {
+    width: 80%;
+    font-size: 1rem;
+}
+
+.panel-deals {
+    font-size: 1rem;
+    font-weight: 700;
+}

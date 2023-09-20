@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>E-Waste Hub Categories</title>
+    <link
+      rel="website icon"
+      type="png"
+      href="https://cdn-icons-png.flaticon.com/512/712/712747.png"
+    />
+  </head>
+  <body>
+    <nav><%- include('./partials/navbar.ejs') %></nav>
+    <video autoplay loop muted class="home-bg">
+      <source src="/images/bg.mp4" />
+    </video>
+    <h1
+      style="
+        width: 75vw;
+        font-size: 80px;
+        color: #77f93691;
+        margin: 5% 0% 2% 2%;
+      "
+    >
+      Welcome, Let Us Help You Scrap Your E-Waste .....
+    </h1>
+    <div
+      class="information"
+      style="
+        display: flex;
+        align-items: center;
+        width: 95vw;
+        justify-content: space-between;
+      "
+    >
+      <div class="intro">
+        <p>
+          Rapid technological advancements have made electronic devices
+          ubiquitous, but the resulting electronic waste (e-waste) poses a grave
+          environmental and health threat due to its alarming accumulation.
+        </p>
+        <p>
+          E-Waste Hub is a comprehensive platform dedicated to responsible
+          e-waste management, offering information and solutions for individuals
+          and businesses. It's a transformative initiative promoting
+          environmental consciousness and sustainable electronics recycling.
+        </p>
+        <p>
+          <strong>Our Mission: Sustainable E-Waste Management</strong>
+        </p>
+      </div>
+      <div
+        class="stats"
+        style="
+          width: 45%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        "
+      >
+        <div
+          class="stats-india"
+          style="width: 30%; display: flex; flex-direction: column"
+        >
+          <h1 style="color: #77f93691; font-size: 45px">16.01 lakh tonnes</h1>
+          <h3 style="color: white">E-Waste across the Country</h3>
+        </div>
+        <div
+          class="stats-globe"
+          style="width: 30%; display: flex; flex-direction: column"
+        >
+          <h1 style="color: #77f93691; font-size: 45px">5.51 crore tonnes</h1>
+          <h3 style="color: white">E-Waste across Globe</h3>
+        </div>
+      </div>
+    </div>
+
+    <h1
+      style="
+        text-align: center;
+        width: 95vw;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        color: white;
+        font-size: 75px;
+      "
+    >
+      Choose What to Select From...
+    </h1>
+    
+    <div class="outer-div">
+      <% for (let categoryitem of category){ %>
+
+      <div class="card-hover">
+        <div class="card-hover__content">
+          <h3 class="card-hover__title"><%= categoryitem.Name %></h3>
+          <p class="card-hover__text"><%= categoryitem.Description %></p>
+          <a href="/<%= categoryitem.Name %>/products" class="card-hover__link">
+            <span>Show Products</span>
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="card-hover__extra">
+          <h4>
+            Add <span>your</span> products & win upto<span>100 </span> Coins
+          </h4>
+        </div>
+        <img src="<%= categoryitem.Image %>" alt="" />
+      </div>
+
+      <% } %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
