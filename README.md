@@ -1,4 +1,10 @@
 # E-Waste Hub by Bytebybyte
+## Live Link 
+
+https://e-waste-hubbb.onrender.com/home
+
+## Introduction
+
 The problem that the E-waste Facility Hub website is trying to solve is the improper disposal of e-waste in India. E-waste is a significant environmental and health hazard when not handled and disposed of properly. Here are some key aspects of the problem:
 - Environmental Impact: Electronic waste contains hazardous materials such as lead, mercury, and cadmium, which can contaminate soil and water if not disposed of correctly. The improper disposal of e-waste contributes to pollution and environmental degradation.
 - Health Concerns: E-waste often ends up in informal recycling operations, where workers are exposed to harmful substances during the dismantling and recycling process. This poses serious health risks to these individuals and nearby communities.
